@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_action :find_movie, only: [:show]
+  before_action :find_movie, only: [:show,:edit, :update]
   helper_method :sort_column, :sort_direction
 
   def index
@@ -28,6 +28,7 @@ class MoviesController < ApplicationController
   end
 
   def edit
+    @genres = Genre.all
   end
 
   def create

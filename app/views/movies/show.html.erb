@@ -3,6 +3,9 @@
     <li><%= link_to('Home', root_path) %></li>
     <li class="active"><%= @movie.name %></li>
     <li><%= link_to('Reviews', movie_reviews_path(@movie)) %></li>
+    <div class="pull-right">
+      <%= link_to "Edit", edit_movie_path %>
+    </div>
   </ol>
   <div class="movie_header col-lg-12 col-md-12 col-sm-12">
     <div class="col-lg-3 col-md-3 col-sm-3">
